@@ -23,6 +23,27 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.styl/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'stylus-loader'
+        ]
+      },
+      {
+        test: /\.(gif|jpg|png|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              // 小于该数值的图片才会进行转换
+              limit: 1024,
+              name: '[name].[ext]'
+            }
+          }
+        ]
       }
     ]
   }
