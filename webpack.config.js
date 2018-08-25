@@ -19,6 +19,10 @@ const config = {
         loader: 'vue-loader'
       },
       {
+        test: /\.jsx$/,
+        loader: 'babel-loader'
+      },
+      {
         test: /\.css$/,
         use: [
           'style-loader',
@@ -30,6 +34,12 @@ const config = {
         use: [
           'style-loader',
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true // 直接利用stylus-loader生成的sourceMap，提高编译效率
+            }
+          },
           'stylus-loader'
         ]
       },
