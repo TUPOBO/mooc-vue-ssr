@@ -87,6 +87,9 @@ if (isDev) {
     new webpack.NoEmitOnErrorsPlugin() // 减少不需要的信息展示
   )
 } else {
+  config.entry = {
+    app: path.join(__dirname, 'src/index.js')
+  }
   config.output.filename = '[name].[contentHash:8].js'
   config.module.rules.push({
     test: /\.styl/,
@@ -104,6 +107,12 @@ if (isDev) {
       ]
     })
   })
+  config.optimization = {
+    splitChunks: {
+      chunks: 'all'
+    },
+    runtimeChunk: true
+  }
   config.plugins.push(
     new ExtractPlugin('styles.[chunkhash:8].css')
   )
