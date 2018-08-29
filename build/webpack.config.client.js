@@ -25,7 +25,7 @@ const devServer = {
   overlay: {
     error: true // 将webpack错误显示在浏览器中
   },
-  open: true, // 每次运行开发环境都自动打开网页
+  open: false, // 每次运行开发环境都自动打开网页
   // historyFallback: {  // 未设置的路由重定向为入口index.html文件
 
   // }
@@ -66,12 +66,12 @@ if (isDev) {
 } else {
   config = merge(baseConfig, {
     entry: {
-      app: path.join(__dirname, '../src/index.js')
+      app: path.join(__dirname, '../client/index.js')
     },
     output: {
       filename: '[name].[contentHash:8].js'
     },
-    modules: {
+    module: {
       rules: [
         {
           test: /\.styl/,

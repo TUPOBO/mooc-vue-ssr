@@ -3,10 +3,10 @@ const path = require('path')
 const config = {
   target: 'web',
   mode: process.env.NODE_ENV,
-  entry: path.join(__dirname, '../src/index.js'),
+  entry: path.join(__dirname, '../client/index.js'),
   output: {
     filename: 'bundle.[hash:8]js',
-    path: path.join(__dirname, 'dist')
+    path: path.join(__dirname, '../dist')
   },
   module: {
     rules: [
@@ -31,7 +31,7 @@ const config = {
             options: {
               // 小于该数值的图片才会进行转换
               limit: 1024,
-              name: '[name].[ext]'
+              name: 'resources/[path][name].[hash:8].[ext]' // 根据开发时的文件夹自动生产单独文件夹
             }
           }
         ]

@@ -9,8 +9,8 @@
 </template>
 
 <script>
-  import Item from './components/item.vue'
-  import Tabs from './components/tabs.vue'
+  import Item from './item.vue'
+  import Tabs from './tabs.vue'
   let id = 0
   export default {
     data() {
@@ -50,7 +50,9 @@
         this.filter = state
       },
       clearAllCompleted () {
-        this.todos.filter(todo => !todo.completed)
+        console.log(this.todos)
+        this.todos = this.todos.filter(todo => !todo.completed)
+        console.log(this.todos)
       }
     }
   }
