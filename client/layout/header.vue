@@ -13,7 +13,7 @@
 <style scoped lang="stylus">
 .main-header {
   text-align center
-  color red
+  color black
   font-size 30px
   }
 </style>
