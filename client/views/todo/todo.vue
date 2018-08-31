@@ -13,10 +13,10 @@
   import Tabs from './tabs.vue'
   let id = 0
   export default {
-    data() {
+    data () {
       return {
         todos: [],
-        filter: 'all',
+        filter: 'all'
       }
     },
     components: {
@@ -24,7 +24,7 @@
       Tabs
     },
     computed: {
-      filterTodos() {
+      filterTodos () {
         if (this.filter === 'all') {
           return this.todos
         }
@@ -34,7 +34,7 @@
       }
     },
     methods: {
-      addTodo(e) {
+      addTodo (e) {
         this.todos.unshift({
           id: id++,
           content: e.target.value.trim(),
@@ -42,11 +42,11 @@
         })
         e.target.value = ''
       },
-      deleteTodo(id) {
-        this.todos.splice(this.todos.findIndex(todo => todo.id == id), 1)
+      deleteTodo (id) {
+        this.todos.splice(this.todos.findIndex(todo => todo.id === id), 1)
         console.log(this.todos)
       },
-      toggleFilter(state) {
+      toggleFilter (state) {
         this.filter = state
       },
       clearAllCompleted () {

@@ -20,7 +20,7 @@
         required: true
       }
     },
-    data() {
+    data () {
       return {
         states: ['all', 'active', 'completed']
       }
@@ -31,10 +31,10 @@
       }
     },
     methods: {
-      clearAllCompleted() {
+      clearAllCompleted () {
         this.$emit('clearAllCompleted')
       },
-      toggleFilter(state) {
+      toggleFilter (state) {
         this.$emit('toggle', state)
       }
     }
