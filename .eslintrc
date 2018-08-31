@@ -3,5 +3,8 @@
   "plugins":[
     "html" // 使用eslint-plugins-html 校验vue中的html
   ],
-  "parser": "babel-eslint"
+  "parser": "babel-eslint",
+  "rules": {
+    "no-new":"off"
+  }
 }
