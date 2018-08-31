@@ -10,7 +10,7 @@
   }
 </script>
 
-<style scoped lang="stylus">
+<style lang="stylus" scoped>
 .main-header {
   text-align center
   color black
