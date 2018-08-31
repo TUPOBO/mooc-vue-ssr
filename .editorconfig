@@ -1,0 +1,11 @@
+// 编辑器配置
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true // 文件最后夹一行空行
+trim_trailing_whitespace = true // 删除一行最后多余的空格

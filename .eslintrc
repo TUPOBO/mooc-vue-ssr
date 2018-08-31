@@ -1,6 +1,7 @@
 {
   "extends": "standard",
   "plugins":[
-    "html"
-  ]
+    "html" // 使用eslint-plugins-html 校验vue中的html
+  ],
+  "parser": "babel-eslint"
 }
